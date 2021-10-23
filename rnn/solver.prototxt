@@ -1,0 +1,2 @@
+net: "sample.prototxt"
+solver_mode: CPU

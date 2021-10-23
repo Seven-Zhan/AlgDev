@@ -1,0 +1,28 @@
+name: "rnn_sample"
+input: "input_x"
+input_shape {dim: 2 dim: 1 dim: 10}
+input: "input_cont"
+input_shape {dim: 2 dim: 1}
+input: "input_h"
+input_shape {dim: 1 dim: 1 dim: 15}
+
+layer {
+    name: "rnn1"
+    type: "RNN"
+    bottom: "input_x"
+    bottom: "input_cont"
+    bottom: "input_h"
+    top: "output_y"
+    top: "output_h"
+    recurrent_param {
+        num_output: 15
+        expose_hidden: true
+        weight_filler {
+            type: "gaussian"
+            std: 0.1
+        }
+        bias_filler {
+            type: "constant"
+        }
+    }
+}
