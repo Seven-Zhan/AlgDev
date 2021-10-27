@@ -1,8 +1,8 @@
 name: "rnn_sample"
 input: "input_x"
-input_shape {dim: 2 dim: 1 dim: 10}
+input_shape {dim: 3 dim: 1 dim: 10}
 input: "input_cont"
-input_shape {dim: 2 dim: 1}
+input_shape {dim: 3 dim: 1}
 input: "input_h"
 input_shape {dim: 1 dim: 1 dim: 15}
 
